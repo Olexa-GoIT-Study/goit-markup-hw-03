@@ -1,6 +1,4 @@
-/* ===== Base styles ===== */
-
-/* #region Base */
+/* #region  ===== Base styles ===== */
 
 body {
   font-family: "Roboto", sans-serif;
@@ -41,26 +39,54 @@ address {
   font-style: normal;
 }
 
+/* #endregion */
+
+/* #region Common style  */
 .feature-title,
 .feature-text,
 .portfolio-subtitle,
-.portfolio-caption {
+.portfolio-caption
+{
   text-align: left;
 }
 
 .hero-title,
 .team-name,
-.team-position{
+.team-position {
   text-align: center;
 }
 
+.container {
+  max-width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
+  /* outline: 2px solid red; */
+}
 
+.padding-section {
+  padding: 120px 0;
+}
 
-/* #endregion */
+.section-title{
+  /* width: 220px; */
+text-align: center;  
+ margin: 0 auto 72px;
+}
 
-/* ===== Header ===== */
+/* #endregion Common style  */
+
+/* #region ===== Header ===== */
+.header > .container {
+  display: flex;
+}
+.nav {
+  display: flex;
+  flex-grow: 1;
+}
 
 .logo {
+  display: inline-flex;
+  align-items: center;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -68,18 +94,38 @@ address {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #2e2f42;
+  margin-right: 76px;
 }
 
 .logo-accent {
   color: #4d5ae5;
 }
 
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
 .nav-link {
+  display: block;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding: 24px 0;
+}
+
+.contacts {
+  margin-left: auto;
+  display: flex;
+}
+.contacts-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
 }
 
 .nav-link:hover,
@@ -99,10 +145,17 @@ address {
   color: #404bbf;
 }
 
-/* ===== Hero ===== */
+/* #endregion ===== Header ===== */
+
+/* #region ===== Hero ===== */
 
 .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #2e2f42;
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 
 .hero-title {
@@ -110,6 +163,7 @@ address {
   line-height: 1.07;
   letter-spacing: 0.02em;
   color: #ffffff;
+  width: 496px;
 }
 
 .hero-button {
@@ -120,16 +174,19 @@ address {
   line-height: 1.5;
   letter-spacing: 0.04em;
   border: none;
+  padding: 16px 32px;
+  margin-top: 48px;
 }
 
 .hero-button:hover,
 .hero-button:focus {
   background-color: #404bbf;
 }
+/* #endregion ===== Hero ===== */
 
-/* ===== Features ===== */
+/* #region ===== Features ===== */
 
-.visually-hidden{
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -148,26 +205,51 @@ address {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding: 8px 0;
 }
+
+.feature-list {
+  display: flex;
+  gap: 24px;
+}
+.feature-item{
+  width: calc((100% - 72px) / 4);
+}
+
+
+
+
 
 .feature-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #434455;
+  color: #434455;  
 }
 
-/* ===== Team ===== */
+/* #endregion ===== Features ===== */
+
+/* #region ===== Team ===== */
+
+
+.team-list{
+  display: flex;
+  gap: 24px;
+}
 
 .team {
   background-color: #f4f4fd;
 }
 
-.team-item {
-  background-color: #ffffff;
+.team-text-wrap{
+  padding: 32px 0;
+  text-align: center;
 }
 
-
+.team-item {
+  width: calc((100% - 3*24px)/4);
+  background-color: #ffffff;
+}
 
 .team-name {
   font-weight: 500;
@@ -175,6 +257,7 @@ address {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 
 .team-position {
@@ -184,7 +267,9 @@ address {
   color: #434455;
 }
 
-/* ===== Portfolio ===== */
+/* #endregion ===== Team ===== */
+
+/* #region ===== Portfolio ===== */
 
 .portfolio-subtitle {
   font-weight: 500;
@@ -201,10 +286,35 @@ address {
   color: #434455;
 }
 
-/* ===== Footer ===== */
+.portfolio-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.portfolio-item{
+  width: calc((100% - 24px*2)/3);
+}
+.portfolio-text-wrap{
+  padding: 32px 16px;
+}
+.portfolio-subtitle{
+  margin-bottom: 8px;
+}
+
+/* #endregion ===== Portfolio ===== */
+
+/* #region ===== Footer ===== */
 
 .footer {
   background-color: #2e2f42;
+  padding: 100px 56px;
+}
+.footer-container{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 264px;
 }
 
 .footer-logo {
@@ -217,3 +327,4 @@ address {
   letter-spacing: 0.02em;
   color: #f4f4fd;
 }
+/* #endregion ===== Footer ===== */

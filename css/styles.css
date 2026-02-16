@@ -45,8 +45,7 @@ address {
 .feature-title,
 .feature-text,
 .portfolio-subtitle,
-.portfolio-caption
-{
+.portfolio-caption {
   text-align: left;
 }
 
@@ -63,14 +62,14 @@ address {
   /* outline: 2px solid red; */
 }
 
-.padding-section {
+.section {
   padding: 120px 0;
 }
 
-.section-title{
+.section-title {
   /* width: 220px; */
-text-align: center;  
- margin: 0 auto 72px;
+  text-align: center;
+  margin: 0 auto 72px;
 }
 
 /* #endregion Common style  */
@@ -78,6 +77,10 @@ text-align: center;
 /* #region ===== Header ===== */
 .header > .container {
   display: flex;
+}
+
+.header {
+  border-bottom: 1px solid #e7e9fc;
 }
 .nav {
   display: flex;
@@ -163,7 +166,8 @@ text-align: center;
   line-height: 1.07;
   letter-spacing: 0.02em;
   color: #ffffff;
-  width: 496px;
+  max-width: 496px;
+  margin: 0 auto;
 }
 
 .hero-button {
@@ -176,6 +180,8 @@ text-align: center;
   border: none;
   padding: 16px 32px;
   margin-top: 48px;
+  display: block;
+  margin: 48px auto 0;
 }
 
 .hero-button:hover,
@@ -212,27 +218,22 @@ text-align: center;
   display: flex;
   gap: 24px;
 }
-.feature-item{
+.feature-item {
   width: calc((100% - 72px) / 4);
 }
-
-
-
-
 
 .feature-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #434455;  
+  color: #434455;
 }
 
 /* #endregion ===== Features ===== */
 
 /* #region ===== Team ===== */
 
-
-.team-list{
+.team-list {
   display: flex;
   gap: 24px;
 }
@@ -241,13 +242,13 @@ text-align: center;
   background-color: #f4f4fd;
 }
 
-.team-text-wrap{
-  padding: 32px 0;
+.team-text-wrap {
+  padding: 32px 16px;
   text-align: center;
 }
 
 .team-item {
-  width: calc((100% - 3*24px)/4);
+  width: calc((100% - 3 * 24px) / 4);
   background-color: #ffffff;
 }
 
@@ -286,21 +287,21 @@ text-align: center;
   color: #434455;
 }
 
-.portfolio-list{
+.portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 48px 24px;
 }
 
-.portfolio-item{
-  width: calc((100% - 24px*2)/3);
+.portfolio-item {
+  width: calc((100% - 24px * 2) / 3);
 }
-.portfolio-text-wrap{
+.portfolio-text-wrap {
   padding: 32px 16px;
-  border-bottom: 1px solid #e7e9fc;
-
+  border: 1px solid #e7e9fc;
+  border-top: none;
 }
-.portfolio-subtitle{
+.portfolio-subtitle {
   margin-bottom: 8px;
 }
 
@@ -310,9 +311,9 @@ text-align: center;
 
 .footer {
   background-color: #2e2f42;
-  padding: 100px 56px;
+  padding: 100px 0;
 }
-.footer-wrapp{
+.footer-wrapp {
   display: flex;
   flex-direction: column;
   gap: 16px;

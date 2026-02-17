@@ -67,9 +67,12 @@ address {
 }
 
 .section-title {
-  /* width: 220px; */
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
   text-align: center;
-  margin: 0 auto 72px;
+  margin-bottom: 72px;
 }
 
 /* #endregion Common style  */
